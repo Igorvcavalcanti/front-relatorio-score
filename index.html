@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Frontend Mentor | Results summary component</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="icon" href="/assets/images/favicon-32x32.png" />
+  </head>
+
+  <body>
+    <app-root>
+      <section class="container">
+        <div clas="row">
+          <div class="col-sm-12 box-content">
+            <div class="col-sm-6 box-left">
+              <div class="title-result"><h2>Your Result</h2></div>
+              <div class="box-rating">
+                <div class="resume-score">76</div>
+                <div><span>of 100</span></div>
+              </div>
+              <div class="box-description">
+                <h2>Great</h2>
+                <p>
+                  Your performance exceed 65% of the people conducting the test
+                  here!
+                </p>
+              </div>
+            </div>
+
+            <div class="col-sm-6 box-right">
+              <div>
+                <div class="destaque">Summary</div>
+              </div>
+
+              <div>
+                <div class="col-sm-12 box-score reaction">
+                  <div class="col-sm-4 text-center">{{icon}}</div>
+                  <div class="col-sm-4 text-center">{{category}}</div>
+                  <div class="col-sm-4 text-center">{{score}}</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="col-sm-12 box-score memory">
+                  <div class="col-sm-4 text-center">{{icon}}</div>
+                  <div class="col-sm-4 text-center">{{category}}</div>
+                  <div class="col-sm-4 text-center">{{score}}</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="col-sm-12 box-score verbal">
+                  <div class="col-sm-4 text-center">{{icon}}</div>
+                  <div class="col-sm-4 text-center">{{category}}</div>
+                  <div class="col-sm-4 text-center">{{score}}</div>
+                </div>
+              </div>
+
+              <div>
+                <div class="col-sm-12 box-score visual">
+                  <div class="col-sm-4 text-center">{{icon}}</div>
+                  <div class="col-sm-4">{{category}}</div>
+                  <div class="col-sm-4">{{score}}</div>
+                </div>
+              </div>
+
+              <div>
+                <button type="button" class="btn btn-primary btn-lg">
+                  Continue
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </app-root>
+  </body>
+</html>
