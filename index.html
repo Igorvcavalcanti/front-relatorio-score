@@ -1,7 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="relatorioScore">
   <head>
     <title>Frontend Mentor | Results summary component</title>
+    <script src="angular1.8/angular.js"></script>
+    <script>
+      angular.module("relatorioScore", []);
+      angular
+        .module("relatorioScore")
+        .controller("relatorioScoreCtrl", function ($scope) {
+          $scope.categories = [
+            {
+              category: "Reaction",
+              score: 80,
+              icon: "./assets/images/icon-memory.svg",
+            },
+            {
+              category: "Memory",
+              score: 92,
+              icon: "img",
+            },
+            {
+              category: "Verbal",
+              score: 61,
+              icon: "img",
+            },
+            {
+              category: "Visual",
+              score: 71,
+              icon: "img",
+            },
+          ];
+        });
+    </script>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -20,7 +50,7 @@
     <link rel="icon" href="/assets/images/favicon-32x32.png" />
   </head>
 
-  <body>
+  <body ng-controller="relatorioScoreCtrl">
     <app-root>
       <section class="container">
         <div clas="row">
@@ -46,37 +76,15 @@
               </div>
 
               <div>
-                <div class="col-sm-12 box-score reaction">
-                  <div class="col-sm-4 text-center">{{icon}}</div>
-                  <div class="col-sm-4 text-center">{{category}}</div>
-                  <div class="col-sm-4 text-center">{{score}}</div>
+                <div
+                  class="col-sm-12 box-score reaction"
+                  ng-repeat="categoria in categories"
+                >
+                  <div class="col-sm-4 text-center">{{categoria.icon}}</div>
+                  <div class="col-sm-4 text-center">{{categoria.category}}</div>
+                  <div class="col-sm-4 text-center">{{categoria.score}}</div>
                 </div>
               </div>
-
-              <div>
-                <div class="col-sm-12 box-score memory">
-                  <div class="col-sm-4 text-center">{{icon}}</div>
-                  <div class="col-sm-4 text-center">{{category}}</div>
-                  <div class="col-sm-4 text-center">{{score}}</div>
-                </div>
-              </div>
-
-              <div>
-                <div class="col-sm-12 box-score verbal">
-                  <div class="col-sm-4 text-center">{{icon}}</div>
-                  <div class="col-sm-4 text-center">{{category}}</div>
-                  <div class="col-sm-4 text-center">{{score}}</div>
-                </div>
-              </div>
-
-              <div>
-                <div class="col-sm-12 box-score visual">
-                  <div class="col-sm-4 text-center">{{icon}}</div>
-                  <div class="col-sm-4">{{category}}</div>
-                  <div class="col-sm-4">{{score}}</div>
-                </div>
-              </div>
-
               <div>
                 <button type="button" class="btn btn-primary btn-lg">
                   Continue
