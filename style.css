@@ -141,11 +141,8 @@ p {
 }
 
 .categories {
-  color: #eee;
-  background: var(
-    --gradient-1,
-    linear-gradient(180deg, #75f 0%, #6943ff 0.01%, #2f2ce9 100%)
-  );
+  color: #303b59;
+  background: #eee;
 }
 
 .btn {
