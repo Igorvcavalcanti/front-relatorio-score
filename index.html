@@ -12,22 +12,22 @@
             {
               category: "Reaction",
               score: 80,
-              icon: "img",
+              icon: "./assets/images/icon-reaction.svg",
             },
             {
               category: "Memory",
               score: 92,
-              icon: "img",
+              icon: "./assets/images/icon-memory.svg",
             },
             {
               category: "Verbal",
               score: 61,
-              icon: "img",
+              icon: "./assets/images/icon-verbal.svg",
             },
             {
               category: "Visual",
               score: 71,
-              icon: "img",
+              icon: "./assets/images/icon-visual.svg",
             },
           ];
         });
@@ -77,10 +77,12 @@
 
               <div>
                 <div
-                  class="col-sm-12 box-score reaction"
+                  class="col-sm-12 box-score categories"
                   ng-repeat="categoria in categories"
                 >
-                  <div class="col-sm-4 text-center">{{categoria.icon}}</div>
+                  <div class="col-sm-4 text-center">
+                    <img src="{{categoria.icon}}" alt="icon" />
+                  </div>
                   <div class="col-sm-4 text-center">{{categoria.category}}</div>
                   <div class="col-sm-4 text-center">{{categoria.score}}</div>
                 </div>
